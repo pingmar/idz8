@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 50px;
+        }
+        
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .input_color{
+            width: 100%;
+            padding: 0px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .inline {
+            width: auto;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .mid {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="mid">User Registration Form</h1>
+
+    <form action="getform.php" method="get">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="18" max="99" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="birthdate">Birthdate:</label>
+        <input type="date" id="birthdate" name="birthdate" required>
+
+        <label for="favoriteColor">Favorite Color:</label>
+        <input type="color" class="input_color" id="favoriteColor" name="favoriteColor" value="#009688">
+
+        <label for="profilePicture">Profile Picture:</label>
+        <input type="file" id="profilePicture" name="profilePicture" accept="image/*">
+
+        <label for="gender">Gender:</label>
+        <div>
+            <label for="male">Male<input type="radio" class="inline" id="male" name="gender" value="male"/></label>
+            <label for="female">Female<input type="radio" class="inline" id="female" name="gender" value="female"></label>
+            <label for="other">Other<input type="radio" class="inline" id="other" name="gender" value="other"></label>
+        </div>
+
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="usa">United States</option>
+            <option value="canada">Canada</option>
+            <option value="uk">United Kingdom</option>
+            <option value="australia">Australia</option>
+        </select>
+        <label for="bio">Bio:</label>
+        <textarea id="bio" name="bio" rows="4"></textarea>
+        <button type="submit">Submit</button>
+        <label for="subscription">Subscribe to newsletter:<input type="checkbox" class="inline" id="subscription" name="subscription"></label>
+
+    </form>
+
+</body>
+</html>
